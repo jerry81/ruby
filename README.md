@@ -2,6 +2,8 @@
 
 ## basics 
 
+! at end of method name emphasises that the method changes the object
+
 # rails
 
 ## basics 
