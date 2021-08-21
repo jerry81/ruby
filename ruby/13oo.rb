@@ -31,6 +31,7 @@ printCat(initializedCat)
 class Country 
     def initialize()
         @states=[]
+        @nationalCats=[]
     end
     def addState(n)
         @states << n
@@ -38,8 +39,18 @@ class Country
     def showStates()
         puts @states
     end
+    def addCat(breed, name, poopSize)
+        @nationalCats << Cat.new(breed, name, poopSize)
+    end
+    def showCats
+        @nationalCats.each { |cat|
+          puts printCat(cat)
+        }
+    end
 end
 
 usa = Country.new
 usa.addState('NJ')
 usa.showStates
+usa.addCat 'sphynx', 'furball', :GIANT
+usa.showCats
