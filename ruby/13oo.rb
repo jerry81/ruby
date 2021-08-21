@@ -25,7 +25,21 @@ printCat(c1)
 defaultCat = Cat.new
 printCat(defaultCat)
 
-initializedCat = Cat.new("american shorthair", "chester", :S)
+initializedCat = Cat.new("american shorthair", "chester chester chester", :S)
 printCat(initializedCat)
 
+class Country 
+    def initialize()
+        @states=[]
+    end
+    def addState(n)
+        @states << n
+    end
+    def showStates()
+        puts @states
+    end
+end
 
+usa = Country.new
+usa.addState('NJ')
+usa.showStates
