@@ -1,2 +1,6 @@
 class Article < ApplicationRecord
-end
+    validates :title, presence: true
+    validates :body, presence: true, length: { minimum: 10 }
+  end
+  
+  # like jpa entities, schema 

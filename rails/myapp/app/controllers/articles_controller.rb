@@ -7,10 +7,12 @@ class ArticlesController < ApplicationController
       @article = Article.find(params[:id])
     end
 
+    # maps to article/new
     def new
       @article = Article.new
     end
   
+    # maps to post article, automically called on form.submit
     def create
       @article = Article.new(article_params)
   
